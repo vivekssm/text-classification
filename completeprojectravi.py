@@ -51,7 +51,7 @@ def calculate_class_score_commonality(sentence, class_name, show_details=True):
         if stemmer.stem(word.lower()) in class_words[class_name]:
             # treat each word with relative w
             if(stemmer.stem(word.lower()) in stop ):
-                score += (1 / corpus_words[stemmer.stem(word.lower())])
+                score += score
             else:
                 score += (1 + corpus_words[stemmer.stem(word.lower())])
             if show_details:
